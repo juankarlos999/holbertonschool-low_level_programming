@@ -1,7 +1,7 @@
 # C language
 
-"C" topics:
-## 0x00-hello_world folder:
+##"C" topics:
+### 0x00-hello_world folder:
 -Basics
 -Functions
 
