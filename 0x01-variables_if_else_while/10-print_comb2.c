@@ -1,6 +1,6 @@
 #include <stdio.h>
 /**
- * main - Funtion that prints the numbers from 0 to 9
+ * main - Funtion that prints the numbers from 0 to 99
  *
  * Return: (0)
  */
