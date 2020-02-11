@@ -1,5 +1,4 @@
 #include "holberton.h"
-#include <stdio.h>
 /**
  * print_last_digit - function that prints the last digit of a number
  * @i: Number positive or negative
@@ -9,8 +8,8 @@ int print_last_digit(int i)
 {
 	if (i < 0)
 	{
-		i = -(i);
 		i = (i % 10);
+		i = -(i);
 	}
 	else
 		i = (i % 10);
