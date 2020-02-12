@@ -1,4 +1,4 @@
-i#include "holberton.h"
+#include "holberton.h"
 
 /**
 * main - tests function that prints if integer is positive or negative
@@ -8,7 +8,7 @@ i#include "holberton.h"
 int main(void)
 {
 	int i;
-	
+
 	i = 98;
 	num = positive_or_negative(i);
 
