@@ -5,12 +5,10 @@
 void more_numbers(void)
 {
 	short i, j;
-	short range = 14;
-	short times = 10;
 
-	for (i = 0; i < times; i++)
+	for (i = 0; i < 10; i++)
 	{
-		for (j = 0; j <= range; j++)
+		for (j = 0; j <= 14; j++)
 		{
 			if (j > 9)
 			{
