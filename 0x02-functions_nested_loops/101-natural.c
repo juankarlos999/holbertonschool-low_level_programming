@@ -8,20 +8,16 @@ int main(void)
 {
 	int i;
 	int add = 0;
-	int add1 = 0;
-	int range = 1024;
+	int mult_1 = 0;
+	int mult_2 = 0;
 
-	for (i = 0; i < range; i++)
+	for (i = 0; i < 1024; i++)
 	{
-		if ((i % 3) == 0 || (i % 5) == 0)
-		{
+		mult_1 = i % 3;
+		mult_2 = i % 5;
+		if (mult_1 == 0 || mult_2 == 0)
 			add = add + i;
-			if (add < range)
-			{
-				add1 = add;
-			}
-		}
 	}
-	printf("%d\n", add1);
+	printf("%d\n", add);
 	return (0);
 }
