@@ -4,9 +4,9 @@
  **/
 void more_numbers(void)
 {
-	short i, j;
-	short range = 14;
-	short times = 10;
+	int i, j;
+	int range = 14;
+	int times = 10;
 
 	for (i = 0; i < times; i++)
 	{
