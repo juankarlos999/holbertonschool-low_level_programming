@@ -7,33 +7,40 @@
 void print_number_4_digits(int);
 void print_number_3_digits(int);
 void print_number_2_digits(int);
-void print_number_max_digits(int);
+void print_number_max_digits(unsigned int);
 void print_number(int n)
 {
+	unsigned int aux;
+
 	if ((n < 10 && n > 0) || n == 0)
 		_putchar('0' + n);
 	else if (n < 0)
 	{
-		n = -(n);
-		if (n > 0 && n < 10)
+		aux = -(n);
+		if (n > 0 && aux < 10)
 		{
 		_putchar('-');
-		_putchar('0' + n);
+		_putchar('0' + aux);
 		}
-		else if (n > 9 && n < 100)
+		else if (n > 9 && aux < 100)
 		{
 			_putchar('-');
-			print_number_2_digits(n);
+			print_number_2_digits(aux);
 		}
-		else if (n > 99 && n < 1000)
+		else if (aux > 99 && aux < 1000)
 		{
 			_putchar('-');
-			print_number_3_digits(n);
+			print_number_3_digits(aux);
 		}
-		else if (n > 999 && n < 10000)
+		else if (aux > 999 && aux < 10000)
 		{
 			_putchar('-');
-			print_number_4_digits(n);
+			print_number_4_digits(aux);
+		}
+		else if (aux > 999999999 || aux <= 2147483647)
+		{
+			_putchar('-');
+			print_number_max_digits(aux);
 		}
 	}
 	else if (n > 9 && n < 99)
@@ -96,15 +103,15 @@ void print_number_2_digits(int number)
  * print_number_max_digits - process a number for print
  * @n: integer for print
  */
-void print_number_max_digits(int n)
+void print_number_max_digits(unsigned int n)
 {
-		int aux1 = 0;
-		int aux2 = 0;
-		int aux3 = 0;
-		int aux4 = 0;
-		int aux5 = 0;
-		int aux6 = 0;
-		int aux7 = 0;
+	unsigned int aux1 = 0;
+	unsigned int aux2 = 0;
+	unsigned int aux3 = 0;
+	unsigned int aux4 = 0;
+	unsigned int aux5 = 0;
+	unsigned int aux6 = 0;
+	unsigned int aux7 = 0;
 
 		aux1 = n / 100000000;
 		_putchar('0' + (aux1 / 10));
@@ -113,7 +120,7 @@ void print_number_max_digits(int n)
 		_putchar('0' + (aux2 / 10));
 		aux3 = n % 100000000;
 		aux3 = aux3 / 1000000;
-		_putchar('0' + (aux3 % 10));
+		_putchar('0' + (aux3 / 10));
 		aux4 = n % 10000000;
 		aux4 = aux4 / 100000;
 		_putchar('0' + (aux4 / 10));
