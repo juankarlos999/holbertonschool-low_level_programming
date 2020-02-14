@@ -37,7 +37,7 @@ void print_number(int n)
 			_putchar('-');
 			print_number_4_digits(aux);
 		}
-		else if (aux > 999999999 || aux <= 2147483647)
+		else if (aux > 999999999 || aux <= 2147483648)
 		{
 			_putchar('-');
 			print_number_max_digits(aux);
