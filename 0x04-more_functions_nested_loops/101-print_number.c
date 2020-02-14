@@ -73,7 +73,7 @@ void print_number_4_digits(int number)
 void print_number_3_digits(int number)
 {
 	int aux = 0;
-	
+
 	aux = number / 10;
 	_putchar('0' + (aux / 10));
 	_putchar('0' + (aux % 10));
