@@ -5,6 +5,7 @@
  * @int:integer
  **/
 void print_number_4_digits(int);
+void print_number_4_dig_negative(int);
 void print_number(int n)
 {
 	int aux = 0;
@@ -25,6 +26,10 @@ void print_number(int n)
 			_putchar('0' + (n / 10));
 			_putchar('0' + (n % 10));
 		}
+		else if (n > 999 && n < 10000)
+		{
+			print_number_4_dig_negative(n);
+		}
 	}
 	else if (n > 9 && n < 99)
 	{
@@ -38,7 +43,7 @@ void print_number(int n)
 		_putchar('0' + (aux % 10));
 		_putchar('0' + (n % 10));
 	}
-		else if (n > 999  && n < 10000)
+		else if (n > 999 && n < 10000)
 	{
 		print_number_4_digits(n);
 	}
@@ -59,4 +64,22 @@ void print_number_4_digits(int number)
 	_putchar('0' + (aux2 / 10));
 	_putchar('0' + (aux2 % 10));
 	_putchar('0' + (number % 10));
+}
+/**
+ * print_number_4_dig_negative - process a number negative for print
+ * @num: integer negative for print
+ */
+void print_number_4_dig_negative(int num)
+{
+	int aux = 0;
+	int aux2 = 0;
+
+	num = -(num);
+	aux = num / 100;
+	_putchar('0' + (aux / 10));
+	aux2 = num % 1000;
+	aux2 = aux2 / 10;
+	_putchar('0' + (aux2 / 10));
+	_putchar('0' + (aux2 % 10));
+	_putchar('0' + (num % 10));
 }
