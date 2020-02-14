@@ -17,25 +17,26 @@ void print_number(int n)
 	else if (n < 0)
 	{
 		aux = -(n);
-		if (n > 0 && aux < 10)
+		n = -(n);
+		if (n > 0 && n < 10)
 		{
 		_putchar('-');
-		_putchar('0' + aux);
+		_putchar('0' + n);
 		}
-		else if (n > 9 && aux < 100)
+		else if (n > 9 && n < 100)
 		{
 			_putchar('-');
-			print_number_2_digits(aux);
+			print_number_2_digits(n);
 		}
-		else if (aux > 99 && aux < 1000)
+		else if (n > 99 && n < 1000)
 		{
 			_putchar('-');
-			print_number_3_digits(aux);
+			print_number_3_digits(n);
 		}
-		else if (aux > 999 && aux < 10000)
+		else if (n > 999 && n < 10000)
 		{
 			_putchar('-');
-			print_number_4_digits(aux);
+			print_number_4_digits(n);
 		}
 		else if (aux > 999999999 || aux <= 2147483648)
 		{
