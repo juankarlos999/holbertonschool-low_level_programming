@@ -1,6 +1,6 @@
 /**
  * rev_string - Function that reverses a string
- * @s: String for reverses
+ * @s: String for invert
  **/
 void rev_string(char *s)
 {
