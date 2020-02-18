@@ -1,3 +1,4 @@
+#include "holberton.h"
 /**
  * rev_string - Function that reverses a string
  * @s: String for reverses
