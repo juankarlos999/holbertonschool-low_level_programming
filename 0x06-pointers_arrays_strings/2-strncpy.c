@@ -12,7 +12,7 @@ char *_strncpy(char *dest, char *src, int n)
 {
 	short i = 0;
 	short len_src = _strlen(src);
-	
+
 		while (i < n)
 	{
 		if (i < len_src)
