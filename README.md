@@ -5,7 +5,7 @@
 ### 0x00-hello_world folder:
 - Basics
 - Functions
-
+### 0x07-pointers_arrays_strings:
 - Pointers
 - Data Structures
 - Singly Linked Lists
