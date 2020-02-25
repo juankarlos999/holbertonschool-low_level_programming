@@ -1,5 +1,4 @@
 #include "holberton.h"
-#include <stdio.h>
 /**
  * *_strstr - function that locates a substring
  * @haystack: string
@@ -14,7 +13,7 @@ char *_strstr(char *haystack, char *needle)
 	int i = 0;
 	int len_nee = _strlen(needle);
 
-	while (haystack[i])
+	while (haystack[i] != '\0')
 	{
 		aux = j = 0;
 		if (haystack[i] == needle[0])
@@ -32,7 +31,7 @@ char *_strstr(char *haystack, char *needle)
 		}
 		i++;
 	}
-	return ('\0');
+	return (haystack + i);
 }
 /**
  * _strlen - function that returns the length of a string
