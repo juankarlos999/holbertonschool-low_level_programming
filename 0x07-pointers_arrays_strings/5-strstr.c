@@ -12,7 +12,9 @@ char *_strstr(char *haystack, char *needle)
 	int i = 0;
 	int len_nee = _strlen(needle);
 
-	while (needle[0] && haystack[i])
+	if (needle[0] == '\0')
+		return (haystack);
+	while (haystack[i])
 	{
 		j = 0;
 		aux = i;
@@ -27,7 +29,7 @@ char *_strstr(char *haystack, char *needle)
 		}
 		i++;
 	}
-	return (0);
+	return (haystack);
 }
 /**
  * _strlen - function that returns the length of a string
