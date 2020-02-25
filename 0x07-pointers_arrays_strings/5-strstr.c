@@ -14,22 +14,26 @@ char *_strstr(char *haystack, char *needle)
 
 	if (needle[0] == '\0')
 		return (haystack);
-	while (haystack[i])
+	else
 	{
-		j = 0;
-		aux = i;
-		while (haystack[aux] == needle[j])
+		while (haystack[i])
 		{
-			if (j == len_nee - 1)
+			j = 0;
+			aux = i;
+			while (haystack[aux] == needle[j])
 			{
-				return (haystack + i);
+				if (j == len_nee - 1)
+				{
+					return (haystack + i);
+				}
+				j++;
+				aux++;
 			}
-			j++;
-			aux++;
+			i++;
 		}
-		i++;
+		return (haystack);
 	}
-	return (haystack);
+	return (0);
 }
 /**
  * _strlen - function that returns the length of a string
