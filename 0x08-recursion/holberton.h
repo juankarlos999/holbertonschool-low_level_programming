@@ -42,4 +42,5 @@ int is_palindrome(char *s);
 int wildcmp(char *s1, char *s2);
 int find_root(int radical, int test_num);
 int check_num(int num0, int num1);
+int comp_string(char *string, int size, int aux);
 #endif
