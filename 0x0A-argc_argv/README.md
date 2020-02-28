@@ -1,4 +1,4 @@
-# argc argv
+# Argc Argv
 
 ### General
 - How to use arguments passed to your program
