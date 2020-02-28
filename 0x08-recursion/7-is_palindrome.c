@@ -21,11 +21,10 @@ int is_palindrome(char *s)
  **/
 int _strlen(char *s)
 {
-	int i;
-
-	for (i = 0; s[i] != '\0'; i++)
-	{}
-	return (i);
+	if (*s == '\0')
+		return (0);
+	else
+		return (1 + _strlen(s + 1));
 }
 /**
  * comp_string - compare a string from its opposites
