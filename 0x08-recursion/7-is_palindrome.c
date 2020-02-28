@@ -36,9 +36,9 @@ int _strlen(char *s)
  */
 int comp_string(char *string, int size, int aux)
 {
-	if (string[aux] == string[size] && (size > 1))
-		return (comp_string(string, (size - 1), (aux + 1)));
-	else if (string[aux] == string[size] && (size == 0 || size == 1))
+	if (*string == string[size] && size > 1)
+		return (comp_string((string + 1), (size - 2), aux));
+	else if (*string == string[size] && (size == 0 || size == 1))
 		return (1);
 	else
 		return (0);
