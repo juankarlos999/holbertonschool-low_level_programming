@@ -6,7 +6,7 @@
  * @argv: value of argument
  * Return: Zero success or One if Error
  */
-int main(int argc __attribute__((unused)), char **argv)
+int main(int argc, char **argv)
 {
 	int aux = 1;
 	int adds = 0;
