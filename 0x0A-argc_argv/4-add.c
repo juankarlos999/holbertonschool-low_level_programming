@@ -13,7 +13,7 @@ int main(int argc, char **argv)
 
 	while (aux < argc)
 	{
-		if (*argv[aux] >= 48 && *argv[aux] <= 57)
+		if (*argv[aux] >= 48 && *argv[aux] <= 57 && *argv[aux] != '\0')
 		{
 			adds += atoi(argv[aux]);
 		}
