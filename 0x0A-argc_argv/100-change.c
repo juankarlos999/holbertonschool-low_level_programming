@@ -14,7 +14,7 @@ int main(int argc, char **argv)
 	int coins[5] = {25, 10, 5, 2, 1};
 	int value = 0;
 	int aux1 = 0;
-	int change = 0;
+	int cents = 0;
 
 	if (argc == 1)
 	{
@@ -24,19 +24,16 @@ int main(int argc, char **argv)
 	value = atoi(argv[1]);
 	aux1 = value;
 	if (value < 0)
-	{
-		printf("0\n");
-		return (1);
-	}
+		return (printf("0\n"));
 	while (i < 5)
 	{
 		aux1 = aux1 / coins[i];
-		change += aux1;
+		cents += aux1;
 		value = value % coins[i];
 		aux1 = value;
 		if (value == 0)
 			break;
 		i++;
 	}
-	return (printf("%d\n", change));
+	return (printf("%d\n", cents));
 }
