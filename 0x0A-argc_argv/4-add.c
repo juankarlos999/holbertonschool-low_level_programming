@@ -11,6 +11,8 @@ int main(int argc, char **argv)
 	int aux = 1;
 	int add = 0;
 
+	if (argc == 0)
+		return (0);
 	while (aux < argc && *argv[aux] != '\0')
 	{
 		if ((*argv[aux] < 48 || *argv[aux] > 57) && *argv[aux] != 45)
