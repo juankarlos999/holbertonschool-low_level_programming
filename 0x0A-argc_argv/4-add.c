@@ -6,22 +6,22 @@
  * @argv: value of argument
  * Return: Zero success or One if Error
  */
-int main(int argc, char **argv)
+int main(int argc __attribute__((unused)), char **argv)
 {
-	int i, a, add;
+	int i, add;
 
+	i = 1;
 	add = 0;
-	for (i = 1; i < argc; i++)
+	while (*(argv + i))
 	{
-		for (a = 0; argv[i][a] != '\0'; a++)
+		if (*argv[i] < 47 || *argv[i] > 57)
 		{
-			if (argv[i][a] < 47 || argv[i][a] > 57)
-			{
-				printf("Error\n");
-				return (1);
-			}
+			printf("Error\n");
+			return (1);
 		}
+		else
 			add = add + atoi(argv[i]);
+		i++;
 	}
 	printf("%d\n", add);
 
