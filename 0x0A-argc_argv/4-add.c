@@ -8,21 +8,22 @@
  */
 int main(int argc, char **argv)
 {
-	int i;
-	int add = 0;
+	int i, a, add;
 
+	add = 0;
 	for (i = 1; i < argc; i++)
 	{
-		if ((*argv[i] < 48 || *argv[i] > 57) && *argv[i] != 45)
+		for (a = 0; argv[i][a] != '\0'; a++)
 		{
-			printf("Error\n");
-			return (1);
+			if (argv[i][a] < 47 || argv[i][a] > 57)
+			{
+				printf("Error\n");
+				return (1);
+			}
 		}
-		else
-		{
-			add += atoi(argv[i]);
-		}
+			add = add + atoi(argv[i]);
 	}
 	printf("%d\n", add);
+
 	return (0);
 }
