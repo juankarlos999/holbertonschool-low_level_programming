@@ -12,16 +12,14 @@ int main(int argc __attribute__((unused)), char **argv)
 
 	i = 1;
 	add = 0;
-	while (*(argv + i))
+	for (;*(argv + i); i++)
 	{
 		if (*argv[i] < 47 || *argv[i] > 57)
 		{
 			printf("Error\n");
 			return (1);
 		}
-		else
-			add = add + atoi(argv[i]);
-		i++;
+		add = add + atoi(argv[i]);
 	}
 	printf("%d\n", add);
 
