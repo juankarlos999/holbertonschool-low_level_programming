@@ -8,23 +8,20 @@
  */
 int main(int argc, char **argv)
 {
-	int aux = 1;
+	int i;
 	int add = 0;
 
-	if (argc == 0)
-		return (0);
-	while (aux < argc && *argv[aux] != '\0')
+	for (i = 1; i < argc; i++)
 	{
-		if ((*argv[aux] < 48 || *argv[aux] > 57) && *argv[aux] != 45)
+		if ((*argv[i] < 48 || *argv[i] > 57) && *argv[i] != 45)
 		{
 			printf("Error\n");
 			return (1);
 		}
 		else
 		{
-			add += atoi(argv[aux]);
+			add += atoi(argv[i]);
 		}
-		aux++;
 	}
 	printf("%d\n", add);
 	return (0);
