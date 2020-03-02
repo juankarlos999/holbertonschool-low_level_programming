@@ -35,5 +35,6 @@ int main(int argc, char **argv)
 			break;
 		i++;
 	}
-	return (printf("%d\n", cents));
+	printf("%d\n", cents);
+	return (0);
 }
