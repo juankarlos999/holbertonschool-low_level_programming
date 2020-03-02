@@ -9,21 +9,21 @@
 int main(int argc, char **argv)
 {
 	int aux = 1;
-	int adds = 0;
+	int add = 0;
 
 	while (aux < argc)
 	{
-		if (*argv[aux] >= 48 && *argv[aux] <= 57 && *argv[aux] != '\0')
-		{
-			adds += atoi(argv[aux]);
-		}
-		else
+		if ((*argv[aux] < 48 || *argv[aux] > 57) && *argv[aux] != 45)
 		{
 			printf("Error\n");
 			return (1);
 		}
+		else
+		{
+			add += atoi(argv[aux]);
+		}
 		aux++;
 	}
-	printf("%d\n", adds);
+	printf("%d\n", add);
 	return (0);
 }
