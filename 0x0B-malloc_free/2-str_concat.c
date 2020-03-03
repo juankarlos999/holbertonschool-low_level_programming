@@ -1,9 +1,9 @@
 #include <stdlib.h>
-#include <stdio.h>
 /**
- * *_strdup - function that returns a pointer to a newly allocated space in
+ * *str_concat - function that returns a pointer to a newly allocated space in
  * memory, which contains a copy of the string given as a parameter
- * @str: string for copy
+ * @s1: string one for concatenate
+ * @s2: string two for concatenate
  * Return: NULL if str = NULL, otherwise char copy
  */
 char *str_concat(char *s1, char *s2)
@@ -11,7 +11,7 @@ char *str_concat(char *s1, char *s2)
 	char *copy;
 	unsigned int size1 = 0;
 	unsigned int size2 = 0;
-	unsigned int i, j; 
+	unsigned int i, j;
 
 	if (s1 == NULL)
 		return (NULL);
