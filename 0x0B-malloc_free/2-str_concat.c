@@ -4,7 +4,7 @@
  * memory, which contains a copy of the string given as a parameter
  * @s1: string one for concatenate
  * @s2: string two for concatenate
- * Return: NULL if str = NULL, otherwise char copy
+ * Return: NULL if str = NULL, otherwise char concat
  */
 char *str_concat(char *s1, char *s2)
 {
