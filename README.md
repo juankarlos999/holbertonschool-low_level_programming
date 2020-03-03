@@ -12,6 +12,7 @@
 - Arrays
 - Bit Manipulation
 - Variadic Functions
+### 0x0B-malloc_free
 - Memory Management
 - File Redirection
 - printf
