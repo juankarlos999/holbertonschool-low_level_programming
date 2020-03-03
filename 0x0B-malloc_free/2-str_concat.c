@@ -8,7 +8,7 @@
  */
 char *str_concat(char *s1, char *s2)
 {
-	char *copy;
+	char *concat;
 	unsigned int size1 = 0;
 	unsigned int size2 = 0;
 	unsigned int i, j;
@@ -26,18 +26,18 @@ char *str_concat(char *s1, char *s2)
 		size2++;
 	}
 
-	copy = malloc(sizeof(char) * (size1 + size2 + 2));
+	concat = malloc(sizeof(char) * (size1 + size2 + 2));
 
-	if (copy == NULL)
+	if (concat == NULL)
 		return (NULL);
 	for (i = 0; i < size1; i++)
 	{
-		copy[i] = s1[i];
+		concat[i] = s1[i];
 	}
 	for (j = 0; j < size2; i++, j++)
 	{
-		copy[i] = s2[j];
+		concat[i] = s2[j];
 	}
-	copy[i] = '\0';
-	return (copy);
+	concat[j] = '\0';
+	return (concat);
 }
