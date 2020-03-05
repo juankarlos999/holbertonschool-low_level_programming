@@ -10,6 +10,9 @@ char **strtow(char *str)
 	int i = 0, aux = 0;
 	char **s = NULL;
 
+	if (str == NULL || str == 0)
+		return (NULL);
+
 	while (str[aux] != '\0')
 	{
 		if (str[aux] != ' ')
