@@ -10,9 +10,7 @@ char **strtow(char *str)
 	int i = 0, aux = 0;
 	char **s = NULL;
 
-	if (str == NULL)
-		return (NULL);
-	if (*str == 0)
+	if (str == NULL || *str == 0)
 		return (0);
 
 	while (str[aux] != '\0')
@@ -26,6 +24,8 @@ char **strtow(char *str)
 	}
 	if (str[0] != ' ')
 		i++;
+	if (i == 0)
+		return (0);
 	s = malloc(sizeof(char *) * (i + 1));
 	if (s == NULL)
 		return (NULL);
@@ -45,23 +45,22 @@ char **creat_array(char **s1, char *str, int size)
 
 	for (j = 0; j <= size; j++)
 	{
-		aux1 = 1;
+		aux1 = 0;
 		while (str[aux0] != '\0')
 		{
 			if (str[aux0] != ' ')
 			{
 				if (str[aux0 + 1] == ' ' || str[aux0 + 1] == '\0')
 				{
-					aux3 = aux0 - (aux1 - 1);
+					aux3 = aux0 - aux1;
 					aux0++;
+					aux1++;
 					break;
 				}
 				aux1++;
 			}
 			aux0++;
 		}
-		if (str[aux0] == '\0')
-			aux1--;
 		if (aux1 > 0 && str[aux3] != ' ')
 		{
 			s1[j] = malloc(sizeof(char) * (aux1 + 1));
