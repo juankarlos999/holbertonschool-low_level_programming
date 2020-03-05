@@ -1,6 +1,5 @@
 #include <stdlib.h>
 #include "holberton.h"
-#include <stdio.h>
 /**
  * **strtow - function that splits a string into words
  * @str: strings
@@ -61,7 +60,8 @@ char **creat_array(char **s1, char *str, int size)
 			}
 			aux0++;
 		}
-		printf("aux1 = %d antes de MALLOC", aux1);
+		if (str[aux0] == '\0')
+			aux1--;
 		if (aux1 > 0 && str[aux3] != ' ')
 		{
 			s1[j] = malloc(sizeof(char) * (aux1 + 1));
