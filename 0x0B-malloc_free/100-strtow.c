@@ -10,8 +10,8 @@ char **strtow(char *str)
 	int i = 0, aux = 0;
 	char **s = NULL;
 
-	if (str == NULL || *str == 32)
-		return (NULL);
+	if (str == NULL || *str == 0)
+		return (0);
 
 	while (str[aux] != '\0')
 	{
