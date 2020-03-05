@@ -10,7 +10,7 @@ char **strtow(char *str)
 	int i = 0, aux = 0;
 	char **s = NULL;
 
-	if (str == NULL || *str == 0)
+	if (str == NULL)
 		return (NULL);
 	if (*str == 0)
 		return (0);
