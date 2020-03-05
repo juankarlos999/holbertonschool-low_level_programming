@@ -22,6 +22,8 @@ char **strtow(char *str)
 		}
 		aux++;
 	}
+	if (str[0] != ' ')
+		i++;
 	s = malloc(sizeof(char *) * (i + 1));
 	if (s == NULL)
 		return (NULL);
@@ -46,7 +48,7 @@ char **creat_array(char **s1, char *str, int size)
 		{
 			if (str[aux0] != ' ')
 			{
-				if (str[aux0 + 1] == ' ')
+				if (str[aux0 + 1] == ' ' || str[aux0 + 1] == '\0')
 				{
 					aux3 = aux0 - (aux1 - 1);
 					aux0++;
