@@ -45,7 +45,6 @@ char *_strdup(char *str)
 	copy = malloc(sizeof(char) * (size + 1));
 
 	if (copy == NULL)
-		free(copy);
 		return (NULL);
 	for (i = 0; i < size; i++)
 	{
