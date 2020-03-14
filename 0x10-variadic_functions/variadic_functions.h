@@ -1,6 +1,11 @@
 #ifndef _variadic_functions_h_
 #define _variadic_functions_h_
 #include <stdarg.h>
+/**
+ * struct opc - struct of data type opc
+ * @array: Arguments for analyze and formatted
+ * @function_pointer: Functions that print data edited
+*/
 typedef struct opc
 {
 	char *array;
