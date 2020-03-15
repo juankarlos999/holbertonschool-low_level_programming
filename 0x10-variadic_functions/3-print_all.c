@@ -81,8 +81,5 @@ void print_string(va_list argv)
 	char *str;
 
 	str = va_arg(argv, char*);
-	if (str == NULL)
-		printf("%p", str);
-	else
-		printf("%s", str);
+	printf("%s", str == NULL ? str : "(nil)");
 }
