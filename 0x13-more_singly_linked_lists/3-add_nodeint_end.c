@@ -1,8 +1,9 @@
 #include "lists.h"
 /**
- * listint_len - unction that returns the number of elements in a linked
- * listint_t
- * @h: variable type struct
+ * add_nodeint_end - function that adds a new node at the end of a listint_t
+ * list
+ * @head: variable type struct
+ * @n: number for copy
  * Return: the number of nodes
  */
 listint_t *add_nodeint_end(listint_t **head, const int n)
