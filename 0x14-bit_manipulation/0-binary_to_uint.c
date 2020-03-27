@@ -9,12 +9,12 @@ unsigned int binary_to_uint(const char *b)
 	unsigned int num_dec = 0;
 	int i, j, len = 0, aux = 1, table_binary[100];
 
-	if (b == 0)
-		return (num_dec);
+	if (b == NULL)
+		return (0);
 	while (b[len])
 	{
 		if (b[len] < 48 || b[len] > 57)
-			return (num_dec);
+			return (0);
 		len++;
 	}
 	table_binary[0] = 1;
