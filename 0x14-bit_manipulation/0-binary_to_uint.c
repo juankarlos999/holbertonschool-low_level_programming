@@ -17,7 +17,7 @@ unsigned int binary_to_uint(const char *b)
 		len++;
 	}
 	table_binary[0] = 1;
-	if (len == 1)
+	if (len == 1 && b[len] == '1')
 		return (num_dec += 1);
 	for (i = 1; i <= len; i++)
 		table_binary[i] = (aux *= 2);
