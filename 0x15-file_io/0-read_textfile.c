@@ -4,7 +4,7 @@
  * standard output
  * @filename: name file for open, read and print
  * @letters: number of characters for read
- * Return: number of bytes type char
+ * Return: number of bytes type char.
  */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
