@@ -1,4 +1,5 @@
 #include "holberton.h"
+#include <stdlib.h>
 /**
  * read_textfile - function that reads a text file and prints it to the POSIX
  * standard output
@@ -8,8 +9,8 @@
  */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	int fd, len = (int)letters;
-	char buffer[len];
+	int fd;
+	char *buffer;
 	ssize_t num_bytes;
 
 	if (filename == NULL)
@@ -17,10 +18,14 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	fd = open(filename, O_RDONLY);
 	if (fd == -1)
 		return (0);
+	buffer = malloc(sizeof(char) * letters);
+	if (buffer == NULL)
+		return (0);
 	num_bytes = read(fd, buffer, letters);
 	close(fd);
 	if (num_bytes == -1)
-		return (0);
+		return (free(buffer), 0);
 	write(STDOUT_FILENO, buffer, num_bytes);
+	free(buffer);
 	return (num_bytes);
 }
