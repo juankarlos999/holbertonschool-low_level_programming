@@ -8,12 +8,12 @@
  */
 int main(int ac, char **av)
 {
-	int input, output, close1, close2;
+	int input, output;
 	char buffer[1024];
 	ssize_t num_bytes;
 
 	if (ac != 3)
-		dprintf(2, "Usage: %s file_from file_to\n", av[0]), exit(97);
+		dprintf(2, "Usage: cp file_from file_to\n"), exit(97);
 	input = open(av[1], O_RDONLY);
 	if (input == -1)
 		dprintf(2, "Error: Can't read from file %s\n", av[1]), exit(98);
@@ -25,11 +25,9 @@ int main(int ac, char **av)
 		dprintf(2, "Error: Can't read from file %s\n", av[1]), exit(98);
 	if ((write(output, buffer, num_bytes) == -1))
 		dprintf(2, "Error: Can't write to %s\n", av[2]), exit(99);
-	close1 = close(input);
-	if (close1 == -1)
+	if ((close(input)) == -1)
 		dprintf(2, "Error: Can't close fd %d\n", input), exit(100);
-	close2 = close(output);
-	if (close2 == -1)
+	if ((close(output)) == -1)
 		dprintf(2, "Error: Can't close fd %d\n", output), exit(100);
 	return (0);
 }
