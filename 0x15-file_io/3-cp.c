@@ -8,7 +8,7 @@
  */
 int main(int ac, char **av)
 {
-	int input, output;
+	int input, output, close1, close2;
 	char buffer[1024];
 	ssize_t num_bytes;
 
@@ -25,9 +25,11 @@ int main(int ac, char **av)
 		dprintf(2, "Error: Can't read from file %s\n", av[1]), exit(98);
 	if ((write(output, buffer, num_bytes) == -1))
 		dprintf(2, "Error: Can't write to %s\n", av[2]), exit(99);
-	if ((close(input)) == -1)
+	close1 = close(input);
+	if (close1 == -1)
 		dprintf(2, "Error: Can't close fd %d\n", input), exit(100);
-	if ((close(output)) == -1)
+	close2 = close(output);
+	if (close2 == -1)
 		dprintf(2, "Error: Can't close fd %d\n", output), exit(100);
 	return (0);
 }
