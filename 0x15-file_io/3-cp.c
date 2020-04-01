@@ -23,7 +23,6 @@ int main(int ac, char **av)
 	num_bytes = read(input, buffer, 1024);
 	if (num_bytes == -1)
 		dprintf(2, "Error: Can't read from file %s\n", av[1]), exit(98);
-	write(output, buffer, num_bytes);
 	if ((write(output, buffer, num_bytes) == -1))
 		dprintf(2, "Error: Can't write to %s\n", av[2]), exit(99);
 	if ((close(input)) == -1)
