@@ -1,1 +1,1 @@
-# Programming language study plan C
+# search_algorithms
